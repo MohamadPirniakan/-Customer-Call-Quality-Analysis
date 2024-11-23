@@ -25,4 +25,95 @@ Install the dependencies using the following command:
 
 ```bash
 pip install -r requirements.txt
+```
 
+> **Note**: Ensure you have Python 3.7 or later installed.
+
+## File Structure
+
+- `main.py`: Contains the core implementation.
+- `January_MyCall_2022.csv`: Placeholder for the dataset (update with the actual file).
+- `README.md`: Documentation for the project.
+
+## Usage
+
+1. **Clone the repository**:
+   ```bash
+   https://github.com/MohamadPirniakan/Customer-Call-Quality-Analysis.git
+   cd your-repo-name
+   ```
+
+2. **Run the script**:
+   Update the `filepath` variable in `main.py` with the path to your dataset, then execute:
+
+   ```bash
+   python main.py
+   ```
+
+3. **Analyze the results**:
+   Review the printed metrics, visualizations, and sample predictions for insights.
+
+## Code Workflow
+
+1. **Load Data**:
+   ```python
+   df = load_data(filepath)
+   ```
+
+2. **Visualize Data**:
+   ```python
+   visualize_data(df)
+   ```
+
+3. **Preprocess Data**:
+   ```python
+   X_train, X_test, y_train, y_test = preprocess_data(df)
+   ```
+
+4. **Train Models**:
+   ```python
+   results = train_models(X_train, y_train)
+   ```
+
+5. **Hyperparameter Tuning**:
+   ```python
+   best_model = grid_search_ridge(X_train, y_train)
+   ```
+
+6. **Evaluate Best Model**:
+   ```python
+   evaluate_model(best_model, X_test, y_test)
+   ```
+
+## Visualizations
+
+The script generates the following plots:
+
+- Histograms for categorical features.
+- Bar plots showing the average rating by categorical features.
+- Pair plots for latitude and longitude with rating distribution.
+- Scatter plot comparing true vs. predicted ratings.
+
+## Sample Data
+
+The dataset (`January_MyCall_2022.csv`) is expected to have the following columns:
+
+- `operator`
+- `inout_travelling`
+- `network_type`
+- `rating`
+- `calldrop_category`
+- `state_name`
+- `latitude`
+- `longitude`
+
+Replace the placeholder file path with your actual dataset location.
+
+## Acknowledgments
+
+This project uses `scikit-learn` for machine learning and `matplotlib`/`seaborn` for data visualization.
+
+---
+
+Feel free to contribute, raise issues, or suggest improvements. 😄
+```
